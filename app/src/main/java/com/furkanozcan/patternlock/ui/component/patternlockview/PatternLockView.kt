@@ -396,6 +396,8 @@ class PatternLockView @JvmOverloads constructor(
         invalidate()
     }
 
+    fun getPassword(stageState: PatternViewStageState) = stagePasswords[stageState]
+
     fun setOnChangeStateListener(listener: (state: PatternViewState) -> Unit) {
         onChangeStateListener = listener
     }
