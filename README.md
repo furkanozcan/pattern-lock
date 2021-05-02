@@ -2,6 +2,10 @@
 
 Sample project for created Pattern Lock View using custom view.
 
+## Preview
+
+<img src="https://github.com/furkanozcan/pattern-lock/blob/main/preview/pattern_lock.gif" align="center" width="200" height="400" />
+
 ## Usage
 
 ### Step 1
