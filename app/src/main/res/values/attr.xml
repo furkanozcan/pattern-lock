@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PatternLockView">
+        <attr name="patternLock_isAnimate" format="boolean" />
+        <attr name="patternLock_dotColor" format="color" />
+        <attr name="patternLock_lineColor" format="color" />
+        <attr name="patternLock_successDotColor" format="color" />
+        <attr name="patternLock_successLineColor" format="color" />
+        <attr name="patternLock_errorDotColor" format="color" />
+        <attr name="patternLock_errorLineColor" format="color" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PatternLockView</string>
+
+    <!-- button -->
+    <string name="stage_button_confirm">CONFIRM</string>
+    <string name="stage_button_next">NEXT</string>
+    <string name="clear_button">Clear</string>
+
+    <!-- textView -->
+    <string name="title">Set Screen Lock</string>
+    <string name="sub_title">For security, set pattern</string>
+    <string name="initial_message_first_stage">Draw an unlock pattern</string>
+    <string name="initial_message_second_stage">"Draw pattern again to confirm"</string>
+    <string name="started_message">Release finger when done</string>
+    <string name="success_message_first_stage">Pattern recorded</string>
+    <string name="success_message_second_stage">Your new unlock pattern</string>
+    <string name="error_message_first_stage">Connect at least 4 dots. Try again.</string>
+    <string name="error_message_second_stage">Wrong pattern</string>
+
+    <!-- dialog -->
+    <string name="alert_dialog_confirm_message">Congratulations! Your new unlock pattern is created.</string>
+    <string name="alert_dialog_positive_button">Okay!</string>
+</resources>

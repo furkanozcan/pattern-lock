@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.PatternLockActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_56dp"
+        android:text="@string/title"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/title_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:text="@string/sub_title"
+        android:textColor="@color/sub_title_text_color"
+        android:textSize="@dimen/sub_title_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_32dp"
+        android:text="@string/initial_message_first_stage"
+        android:textColor="@color/message_text_default_color"
+        android:textSize="@dimen/message_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubTitle" />
+
+    <com.furkanozcan.patternlock.ui.component.patternlockview.PatternLockView
+        android:id="@+id/patternLockView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_32dp"
+        app:layout_constraintBottom_toTopOf="@id/stageButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/clearTextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:background="@android:color/transparent"
+        android:text="@string/clear_button"
+        android:textColor="@color/clear_button_text_color"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/stageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:enabled="false"
+        android:text="@string/stage_button_next"
+        android:textColor="@color/stage_button_text_color"
+        app:backgroundTint="@drawable/stage_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
