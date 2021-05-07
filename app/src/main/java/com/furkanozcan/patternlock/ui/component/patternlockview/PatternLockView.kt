@@ -17,8 +17,8 @@ import androidx.core.view.forEach
 import androidx.core.view.forEachIndexed
 import androidx.core.view.setMargins
 import com.furkanozcan.patternlock.R
-import com.furkanozcan.patternlock.ui.component.patternlockview.dotview.DotView
-import com.furkanozcan.patternlock.ui.component.patternlockview.dotview.model.Dot
+import com.furkanozcan.patternlock.ui.component.dotview.DotView
+import com.furkanozcan.patternlock.ui.component.dotview.model.Dot
 
 class PatternLockView @JvmOverloads constructor(
     context: Context,

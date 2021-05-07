@@ -1,4 +1,4 @@
-package com.furkanozcan.patternlock.ui.component.patternlockview.dotview
+package com.furkanozcan.patternlock.ui.component.dotview
 
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
@@ -11,12 +11,15 @@ import android.util.AttributeSet
 import android.widget.LinearLayout
 import androidx.annotation.ColorInt
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.animation.doOnEnd
 import com.furkanozcan.patternlock.R
 
 private const val ANIMATION_DURATION = 200L
 private const val ANIMATION_SCALE_VALUE = 2f
 
-internal class DotView @JvmOverloads constructor(
+private var animator: ObjectAnimator? = null
+
+class DotView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
@@ -38,6 +41,14 @@ internal class DotView @JvmOverloads constructor(
         setWillNotDraw(false)
     }
 
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+
+        animator?.cancel()
+        animator?.removeAllListeners()
+        animator = null
+    }
+
     fun setKey(key: String) {
         this.key = key
     }
@@ -47,7 +58,7 @@ internal class DotView @JvmOverloads constructor(
     }
 
     fun animateDotView() {
-        ObjectAnimator.ofPropertyValuesHolder(
+        animator = ObjectAnimator.ofPropertyValuesHolder(
             this,
             PropertyValuesHolder.ofFloat("scaleX", ANIMATION_SCALE_VALUE),
             PropertyValuesHolder.ofFloat("scaleY", ANIMATION_SCALE_VALUE)
@@ -55,6 +66,12 @@ internal class DotView @JvmOverloads constructor(
             duration = ANIMATION_DURATION
             repeatMode = ValueAnimator.REVERSE
             repeatCount = ValueAnimator.RESTART
-        }.start()
+            start()
+        }
+
+        animator?.doOnEnd {
+            animator?.removeAllListeners()
+            animator = null
+        }
     }
 }

@@ -1,4 +1,4 @@
-package com.furkanozcan.patternlock.ui.component.patternlockview.dotview.model
+package com.furkanozcan.patternlock.ui.component.dotview.model
 
 data class Dot(
     val rowIndex: Float = 0.0f,
